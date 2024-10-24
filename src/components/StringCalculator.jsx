@@ -7,7 +7,7 @@ function StringCalculator() {
   function add(numbers) {
     if (numbers === "") return 0;
 
-    let delimiter = ",";
+    let delimiter = [",", ";"];
     if (numbers.includes("\\")) {
       const parts = numbers.split("\\n");
       numbers = parts.join("\n");
@@ -18,7 +18,7 @@ function StringCalculator() {
       .split(new RegExp(`[${delimiter}\\n]`))
       .map((num) => Number(num.trim()))
       .filter((num) => !isNaN(num));
-    console.log(numArray, "2345");
+    console.log(numArray, "numArrayRes");
     const negatives = numArray.filter((num) => num < 0);
     if (negatives.length > 0) {
       throw new Error("Negative numbers not allowed: " + negatives.join(", "));
