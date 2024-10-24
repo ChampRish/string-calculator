@@ -53,6 +53,19 @@ body {
     outline: none;
 }
 
+.final-result-txt {
+    font-size: 25px;
+    border: 1px solid wheat;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: grey;
+    font-weight: 600;
+}
+
+.error-main {
+    color: red;
+}
+
 h1 {
     font-size: 3.2em;
     line-height: 1.1;
